@@ -8,10 +8,10 @@ from sqlalchemy.ext.declarative.api import declarative_base
 
 Base = declarative_base()
 SCHEMA = "transactions"
-USER = 'postgres'
-PASSWORD = 'KalEl7286941155'
-URL = '127.0.0.1:5432'
-DB='atm'
+USER = os.getenv('USER')
+PASSWORD = os.getenv('PASSWORD')
+URL = os.getenv('URL')
+DB=os.getenv('DB')
 
 
 class DbConnect:
